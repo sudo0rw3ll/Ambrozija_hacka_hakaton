@@ -9,8 +9,8 @@ module.exports = (sequelize, DataTypes) => {
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-    static associate(models) {
-        this.hasOne(Agents, {foreignKey: 'plantId', onDelete: 'cascade', hooks: true});
+    static associate({ Agent }) {
+      this.hasOne(Agent, { foreignKey: 'plantId', onDelete: 'cascade', hooks: true });
     }
   }
   Plant.init({

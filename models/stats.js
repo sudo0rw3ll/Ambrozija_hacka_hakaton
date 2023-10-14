@@ -18,7 +18,8 @@ module.exports = (sequelize, DataTypes) => {
     temp: DataTypes.FLOAT,
     wsdp: DataTypes.FLOAT,
     pres: DataTypes.FLOAT,
-    ambrosia: DataTypes.FLOAT
+    ambrosia: DataTypes.FLOAT,
+    location: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Stats',

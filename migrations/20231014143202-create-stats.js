@@ -24,6 +24,9 @@ module.exports = {
       ambrosia: {
         type: Sequelize.FLOAT
       },
+      location: {
+        type: Sequelize.STRING
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

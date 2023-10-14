@@ -9,8 +9,8 @@ module.exports = (sequelize, DataTypes) => {
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-    static associate(models) {
-        this.hasMany(UserAgent, {foreignKey: 'userAgentId', onDelete: 'cascade', hooks: true});
+    static associate({ UserAgent }) {
+      this.belongsTo(UserAgent, { foreignKey: 'userAgentId' });
     }
   }
   History.init({
