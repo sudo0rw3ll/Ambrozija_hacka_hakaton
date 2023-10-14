@@ -18,9 +18,19 @@
   },
   "production": {
     "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "password": "e54edXtX6P1jrJ2BJU1HkV1pvLSBXMVJ",
+    "database": "ambrosia",
+    "host": "dpg-cklicu0710pc73cvrg50-a.oregon-postgres.render.com",
+    "url": "postgres://root:e54edXtX6P1jrJ2BJU1HkV1pvLSBXMVJ@dpg-cklicu0710pc73cvrg50-a.oregon-postgres.render.com/ambrosia",
+    "port": 5432,
+    "dialect": "postgres",
+    "logging": false,
+    "sl1": true,
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
   }
 }
