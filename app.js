@@ -90,3 +90,5 @@ app.listen({ port: 2023 }, async () => {
     // await insertMedicines();
     console.log("Server started at port 2023");
 });
+
+module.exports = app;
