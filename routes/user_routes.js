@@ -51,3 +51,32 @@ route.post('/login', (req, res) => {
             }
         }).catch(err => res.status(500).json(err));
 });
+
+route.get('/:id', async (req, res) => {
+    try {
+        const user = await User.findByPk(req.params.id)
+
+        return res.json(user);
+    } catch (err) {
+        console.log(err);
+        return res.status(500).json(err);
+    }
+});
+
+route.put('/:id', async (req, res) => {
+    try {
+        const userToEdit = await User.findByPk(req.params.id);
+
+        userToEdit.username = req.body.username;
+        userToEdit.email = req.body.email;
+        userToEdit.date_of_birth = req.body.date_of_birth;
+        userToEdit.password = bcrypt.hashSync(req.body.password, 10);
+
+        await userToEdit.save();
+
+        return res.json(userToEdit);
+    } catch (err) {
+        console.log(err);
+        return res.status(500).json(err);
+    }
+});
