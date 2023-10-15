@@ -2,6 +2,7 @@ const express = require("express");
 const bcrypt = require("bcrypt");
 const jwt = require('jsonwebtoken');
 const { sequelize, User } = require("../models");
+
 require('dotenv').config();
 
 const route = express.Router();

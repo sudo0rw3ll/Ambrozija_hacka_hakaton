@@ -1,10 +1,17 @@
 const express = require('express');
 const { sequelize, Medicine } = require('./models');
-
+const cors = require('cors');
 const medicines = require("./medicines.json");
 const drugstores = require("./drug_stores.json");
 
 const app = express();
+
+var corsOptions = {
+    origin: '*',
+    optionSuccessStatus: 200
+}
+
+app.use(cors(corsOptions));
 
 async function insertMedicines() {
     try {
