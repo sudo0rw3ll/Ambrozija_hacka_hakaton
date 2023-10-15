@@ -51,7 +51,7 @@ function extractDosage(inputString) {
 
 async function insertMedicines() {
     try {
-        for (let i = 0; i < 1000; i++) {
+        for (let i = 0; i < 100; i++) {
             await Medicine.create(parseMedicine(medicines[i]));
         }
     } catch (err) {
@@ -87,7 +87,7 @@ const plant_routes = require("./routes/plant_routes.js");
 app.use("/plants", plant_routes);
 
 app.listen({ port: 2023 }, async () => {
-    // await insertMedicines();
+    await insertMedicines();
     console.log("Server started at port 2023");
 });
 

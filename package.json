@@ -2,7 +2,7 @@
   "name": "ambrozija_hacka_hakaton",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "ambrosia_service.js",
   "scripts": {
     "build": "npm install",
     "start": "node ambrosia_service.js"
