@@ -86,8 +86,11 @@ app.use("/stats", stat_routes);
 const plant_routes = require("./routes/plant_routes.js");
 app.use("/plants", plant_routes);
 
+const user_routes = require("./routes/user_routes.js");
+app.use("/users", user_routes);
+
 app.listen({ port: 2023 }, async () => {
-    await insertMedicines();
+    // await insertMedicines();
     console.log("Server started at port 2023");
 });
 
