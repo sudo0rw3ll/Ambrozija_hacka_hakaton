@@ -58,8 +58,12 @@ const deleteHistoryForUser = async (req, res) => {
         const history = await History.findAll();
 
         for (let i = 0; i < history.length; i++) {
-            let historyObj = history[i];
-            await historyObj.destroy();
+            for (let j = 0; j < userAgentsForUser.length; j++) {
+                if (history[i]['userAgentId'] == userAgentsForUser[j]['id']) {
+                    let historyObj = history[i];
+                    await historyObj.destroy();
+                }
+            }
         }
 
         return res.json({ msg: "Deleted history for user!" });
@@ -72,5 +76,6 @@ const deleteHistoryForUser = async (req, res) => {
 module.exports = {
     getHistory,
     getHistoryForUser,
-    deleteHistoryForUser
+    deleteHistoryForUser,
+    createHistory
 }
