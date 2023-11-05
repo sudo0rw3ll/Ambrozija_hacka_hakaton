@@ -48,4 +48,4 @@ number and complexity of the features.
 
 # Take a look!
 
-You can take a look at our app by clicking this link [PollenReady](https://ambrozija.netlify.app)
+You can take a look at our app by clicking this link [PollenReady](https://ambrozija.netlify.app/dashboard)
